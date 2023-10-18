@@ -1,0 +1,11 @@
+const mongoose = require("mongoose");
+const db = require("../configDB/db");
+
+const userSchema = new mongoose.Schema({
+  email: { type: String, required: true },
+  password: { type: String, required: true },
+});
+
+const Register_User = mongoose.model("Register_User", userSchema);
+
+module.exports = Register_User;
